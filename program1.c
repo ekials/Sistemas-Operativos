@@ -38,7 +38,7 @@ void manejador10(int signo)
 
 int main(void)
 {
-    printf("[Programa 1] PID: %d\n", getpid());
+    printf("Prgrma 1 PID: %d\n", getpid());
 
     signal(SIGINT, manejador2);
     signal(SIGUSR1, manejador10);
