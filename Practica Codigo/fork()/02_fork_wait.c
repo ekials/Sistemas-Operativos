@@ -6,7 +6,7 @@
 
 int main(void)
 {
-    pid_t pid = fork();
+    pid_t pid = fork(); //dos procesos ejecutandose en paralelo
 
     if(pid < 0)
     {
@@ -27,7 +27,7 @@ int main(void)
         int estado;
         printf("[PADRE]: Esperando a que el hijo (PID : %d) termine..", pid);
 
-        //wait() congela la ejecucion del padre hasya que el hijo llame a exit() [1,5]
+        //wait() congela la ejecucion del padre hasya que el hijo llame a exit() [1,5], hasta que el proceso del hijo termine por completo
         wait(&estado);
 
         //se verifica si el hijo termino normalmente y se extrae el codigo [6,12]
