@@ -6,7 +6,7 @@
 
 int main(void)
 {
-    pid_t pid = fork(); //dos procesos ejecutandose en paralelo
+    pid_t pid = fork(); //doss procesos ejecutandose en paralelo
 
     if(pid < 0)
     {
