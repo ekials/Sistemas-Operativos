@@ -6,7 +6,7 @@
 std::mutex mtx;
 std::condition_variable cv;
 int current_turn = 0;
-bool ready = false;
+bool ready = false; //bussines logic
 
 void print_id(int id) {
     std::unique_lock<std::mutex> lck(mtx);

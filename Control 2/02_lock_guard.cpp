@@ -2,7 +2,7 @@
 #include <thread>
 #include <mutex>
 #include <stdexcept>
-
+//dlock
 std::mutex mtx;
 
 void print_even(int x) {
@@ -16,6 +16,7 @@ void print_thread_id(int id) {
     try {
         // lock_guard: se desbloquea SOLO al salir del scope (incluso con throw)
         std::lock_guard<std::mutex> lck(mtx);
+        
         print_even(id);
     }
     catch (std::logic_error&) {
